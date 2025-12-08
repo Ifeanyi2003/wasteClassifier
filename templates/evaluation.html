@@ -1,0 +1,33 @@
+﻿{% extends "layout.html" %}
+{% block title %}{{ _("Evaluate") }} â€¢ {{ _("Waste Classifier") }}{% endblock %}
+
+{% block content %}
+  <div class="card">
+    <h2 style="margin-top:0;">{{ _("Model Evaluation") }}</h2>
+    <div class="grid cols-3" style="margin-top:14px;">
+      <div>
+        <p class="muted">{{ _("Accuracy") }}</p>
+        <span class="badge">{{ '{:.4f}'.format(accuracy) }}</span>
+      </div>
+      <div>
+        <p class="muted">{{ _("Precision") }}</p>
+        <span class="badge">{{ '{:.4f}'.format(precision) }}</span>
+      </div>
+      <div>
+        <p class="muted">{{ _("Recall") }}</p>
+        <span class="badge">{{ '{:.4f}'.format(recall) }}</span>
+      </div>
+      <div>
+        <p class="muted">{{ _("F1-Score") }}</p>
+        <span class="badge">{{ '{:.4f}'.format(f1) }}</span>
+      </div>
+    </div>
+    <h3 style="margin-top:16px;">{{ _("Confusion Matrix") }}</h3>
+    <div class="card" style="padding:0;">
+      <img src="{{ url_for('static', filename='confusion_matrix.png') }}" alt="{{ _('Confusion Matrix') }}" class="round" style="width:100%; height:auto; border:none;">
+    </div>
+  </div>
+{% endblock %}
+
+
+

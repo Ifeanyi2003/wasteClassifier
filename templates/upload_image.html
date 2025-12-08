@@ -1,0 +1,50 @@
+﻿{% extends "layout.html" %}
+
+{% block title %}{{ _("Upload") }} • {{ _("Waste Classifier") }}{% endblock %}
+
+{% block hero %}
+<div class="hero">
+    <div class="pill">{{ _("Early Access • Help build a cleaner campus") }}</div>
+    <header>
+        <h1 class="slogan">{{ _("Classify Waste Smarter — For a Cleaner Future!") }}</h1>
+    </header>
+    <p>{{ _("Join the waste-bank style movement. Classify items, track results, and turn data into greener actions.") }}</p>
+</div>
+{% endblock %}
+
+{% block content %}
+<div class="card" style="margin-top:22px;">
+    <form method="POST" enctype="multipart/form-data">
+        <label class="muted" for="file">{{ _("Upload an image (PNG/JPG)") }}</label>
+        <input id="file" type="file" name="file" accept="image/*" required onchange="previewFile(event)">
+        
+        <div id="preview" style="margin:16px 0; display:none;">
+            <img id="preview-img" class="round" alt="{{ _("Image Preview") }}" style="max-width:100%; height:auto; max-height:400px;">
+        </div>
+        
+        <div style="display:flex; gap:10px; flex-wrap:wrap; margin-top:20px;">
+            <button class="btn primary" type="submit">{{ _("Classify Waste") }}</button>
+            <a class="btn ghost" href="{{ url_for('history') }}">{{ _("View History") }}</a>
+        </div>
+    </form>
+</div>
+
+<script>
+    function previewFile(e) {
+        const preview = document.getElementById('preview');
+        const previewImg = document.getElementById('preview-img');
+        const file = e.target.files[0];
+        
+        if (file) {
+            const reader = new FileReader();
+            reader.onload = function(ev) {
+                previewImg.src = ev.target.result;
+                preview.style.display = 'block';
+            }
+            reader.readAsDataURL(file);
+        } else {
+            preview.style.display = 'none';
+        }
+    }
+</script>
+{% endblock %}

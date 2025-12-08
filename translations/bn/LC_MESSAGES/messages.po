@@ -1,0 +1,130 @@
+# Bangla translations for Waste Classifier project.
+# Copyright (C) 2025 Your Organization
+# This file is distributed under the same license as the PROJECT project.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Waste Classifier 1.0\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2025-12-04 15:19+0100\n"
+"PO-Revision-Date: 2025-12-04 15:20+0100\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: bn\n"
+"Language-Team: bn <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+msgid "Waste Classifier"
+msgstr "বর্জ্য শ্রেণীবিন্যাসকারী"
+
+msgid "Login"
+msgstr "লগইন"
+
+msgid "Register"
+msgstr "নিবন্ধন করুন"
+
+msgid "Home"
+msgstr "হোম"
+
+msgid "Profile"
+msgstr "প্রোফাইল"
+
+msgid "History"
+msgstr "ইতিহাস"
+
+msgid "Upload"
+msgstr "আপলোড করুন"
+
+msgid "Classify Waste"
+msgstr "বর্জ্য শ্রেণীবিন্যাস করুন"
+
+msgid "View History"
+msgstr "ইতিহাস দেখুন"
+
+msgid "Create Account"
+msgstr "অ্যাকাউন্ট তৈরি করুন"
+
+msgid "Username"
+msgstr "ব্যবহারকারীর নাম"
+
+msgid "Email"
+msgstr "ইমেল"
+
+msgid "Password"
+msgstr "পাসওয়ার্ড"
+
+msgid "Already have an account?"
+msgstr "ইতিমধ্যেই একটি অ্যাকাউন্ট আছে?"
+
+msgid "No account?"
+msgstr "কোনও অ্যাকাউন্ট নেই?"
+
+msgid "Welcome Back"
+msgstr "ফিরে স্বাগতম"
+
+msgid "Your Classification History"
+msgstr "আপনার শ্রেণীবিন্যাস ইতিহাস"
+
+msgid "No history yet. Start by classifying an image."
+msgstr "এখনও কোনও ইতিহাস নেই। একটি চিত্র শ্রেণীবিন্যাস করে শুরু করুন।"
+
+msgid "Prediction"
+msgstr "পূর্বাভাস"
+
+msgid "Model output for your image"
+msgstr "আপনার চিত্রের জন্য মডেল আউটপুট"
+
+msgid "Class:"
+msgstr "শ্রেণী:"
+
+msgid "Confidence:"
+msgstr "নিশ্চয়তা:"
+
+msgid "Status:"
+msgstr "অবস্থা:"
+
+msgid "Unknown"
+msgstr "অজানা"
+
+msgid "♻ Recyclable"
+msgstr "♻ পুনঃপ্রক্রিয়াযোগ্য"
+
+msgid "❌ Not Recyclable"
+msgstr "❌ পুনঃপ্রক্রিয়াযোগ্য নয়"
+
+msgid "Classify Another"
+msgstr "আরেকটি শ্রেণীবিন্যাস করুন"
+
+msgid "Early Access • Help build a cleaner campus"
+msgstr "প্রাথমিক প্রবেশাধিকার • একটি পরিচ্ছন্ন ক্যাম্পাস গড়ে তুলতে সাহায্য করুন"
+
+msgid "🌿 Classify Waste Smarter — For a Cleaner Future! ♻️"
+msgstr "🌿 বর্জ্য আরও বুদ্ধিমত্তার সাথে শ্রেণীবিন্যাস করুন — একটি পরিচ্ছন্ন ভবিষ্যতের জন্য! ♻️"
+
+msgid "Join the waste-bank style movement. Classify items, track results, and turn data into greener actions."
+msgstr "বর্জ্য-ব্যাংক স্টাইল আন্দোলনে যোগ দিন। আইটেমগুলি শ্রেণীবিন্যাস করুন, ফলাফল ট্র্যাক করুন এবং ডেটা সবুজ কর্মে রূপান্তর করুন।"
+
+msgid "Upload an image (PNG/JPG)"
+msgstr "একটি চিত্র আপলোড করুন (PNG/JPG)"
+
+msgid "Model Evaluation"
+msgstr "মডেল মূল্যায়ন"
+
+msgid "Accuracy"
+msgstr "নির্ভুলতা"
+
+msgid "Precision"
+msgstr "সঠিকতা"
+
+msgid "Recall"
+msgstr "রিকল"
+
+msgid "F1-Score"
+msgstr "F1-স্কোর"
+
+msgid "Confusion Matrix"
+msgstr "কনফিউশন ম্যাট্রিক্স"

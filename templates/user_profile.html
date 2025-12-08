@@ -1,0 +1,39 @@
+﻿{% extends "layout.html" %}
+
+{% block title %}{{ _("Profile") }} • {{ _("Waste Classifier") }}{% endblock %}
+
+{% block content %}
+<div class="card" style="max-width: 600px; margin: 40px auto; padding: 32px;">
+    <h2 style="margin-top:0; text-align:center; color:var(--accent);">
+        {{ _("My Profile") }}
+    </h2>
+
+    <div style="display:flex; gap:28px; align-items:center; margin:36px 0; flex-wrap:wrap; justify-content:center;">
+        <div style="width:96px; height:96px; border-radius:50%; background:var(--accent); 
+                    display:flex; align-items:center; justify-content:center; font-size:42px; 
+                    font-weight:700; color:#00140a;">
+            {{ user.username[0]|upper }}
+        </div>
+        <div style="text-align:center;">
+            <div style="font-size:1.6rem; font-weight:700; margin-bottom:6px;">
+                {{ user.username }}
+            </div>
+            <div class="muted" style="font-size:1.2rem; margin:8px 0;">
+                {{ user.email }}
+            </div>
+            <div class="muted">
+                {{ _("Joined") }}: {{ user.date_joined }}
+            </div>
+        </div>
+    </div>
+
+    <div style="text-align:center; margin-top:40px;">
+        <a href="{{ url_for('history') }}" class="btn" style="margin:0 12px; padding:12px 24px;">
+            {{ _("View History") }}
+        </a>
+        <a href="{{ url_for('upload_image') }}" class="btn primary" style="margin:0 12px; padding:12px 32px;">
+            {{ _("Classify Waste") }}
+        </a>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,130 @@
+# Spanish translations for Waste Classifier project.
+# Copyright (C) 2025 Your Organization
+# This file is distributed under the same license as the PROJECT project.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Waste Classifier 1.0\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2025-12-04 15:19+0100\n"
+"PO-Revision-Date: 2025-12-04 15:20+0100\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: es\n"
+"Language-Team: es <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+msgid "Waste Classifier"
+msgstr "Clasificador de residuos"
+
+msgid "Login"
+msgstr "Iniciar sesión"
+
+msgid "Register"
+msgstr "Registrarse"
+
+msgid "Home"
+msgstr "Inicio"
+
+msgid "Profile"
+msgstr "Perfil"
+
+msgid "History"
+msgstr "Historial"
+
+msgid "Upload"
+msgstr "Subir"
+
+msgid "Classify Waste"
+msgstr "Clasificar residuos"
+
+msgid "View History"
+msgstr "Ver historial"
+
+msgid "Create Account"
+msgstr "Crear cuenta"
+
+msgid "Username"
+msgstr "Nombre de usuario"
+
+msgid "Email"
+msgstr "Correo electrónico"
+
+msgid "Password"
+msgstr "Contraseña"
+
+msgid "Already have an account?"
+msgstr "¿Ya tienes una cuenta?"
+
+msgid "No account?"
+msgstr "¿No tienes cuenta?"
+
+msgid "Welcome Back"
+msgstr "Bienvenido de nuevo"
+
+msgid "Your Classification History"
+msgstr "Tu historial de clasificación"
+
+msgid "No history yet. Start by classifying an image."
+msgstr "Aún no hay historial. Comienza clasificando una imagen."
+
+msgid "Prediction"
+msgstr "Predicción"
+
+msgid "Model output for your image"
+msgstr "Resultado del modelo para tu imagen"
+
+msgid "Class:"
+msgstr "Clase:"
+
+msgid "Confidence:"
+msgstr "Confianza:"
+
+msgid "Status:"
+msgstr "Estado:"
+
+msgid "Unknown"
+msgstr "Desconocido"
+
+msgid "♻ Recyclable"
+msgstr "♻ Reciclable"
+
+msgid "❌ Not Recyclable"
+msgstr "❌ No reciclable"
+
+msgid "Classify Another"
+msgstr "Clasificar otro"
+
+msgid "Early Access • Help build a cleaner campus"
+msgstr "Acceso anticipado • Ayuda a crear un campus más limpio"
+
+msgid "🌿 Classify Waste Smarter — For a Cleaner Future! ♻️"
+msgstr "🌿 Clasifica residuos de manera más inteligente — ¡Por un futuro más limpio! ♻️"
+
+msgid "Join the waste-bank style movement. Classify items, track results, and turn data into greener actions."
+msgstr "Únete al movimiento estilo banco de residuos. Clasifica artículos, sigue los resultados y convierte los datos en acciones más ecológicas."
+
+msgid "Upload an image (PNG/JPG)"
+msgstr "Sube una imagen (PNG/JPG)"
+
+msgid "Model Evaluation"
+msgstr "Evaluación del modelo"
+
+msgid "Accuracy"
+msgstr "Precisión"
+
+msgid "Precision"
+msgstr "Exactitud"
+
+msgid "Recall"
+msgstr "Sensibilidad"
+
+msgid "F1-Score"
+msgstr "Puntaje F1"
+
+msgid "Confusion Matrix"
+msgstr "Matriz de confusión"

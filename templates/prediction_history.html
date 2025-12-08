@@ -1,0 +1,55 @@
+﻿{% extends "layout.html" %}
+
+{% block title %}{{ _("History") }} • {{ _("Waste Classifier") }}{% endblock %}
+
+{% block hero %}
+<div class="hero">
+    <h1>{{ _("Your Classification History") }}</h1>
+    <p class="muted">{{ _("All your past waste classifications") }}</p>
+</div>
+{% endblock %}
+
+{% block content %}
+<div class="card" style="margin-top:22px;">
+    {% if history %}
+        <div class="grid cols-3" style="margin-top:20px; gap:20px;">
+            {% for item in history %}
+                {% set img = url_for('static', filename='uploads/' ~ item.image_name) %}
+                {% set is_recyclable = item.prediction in ['cardboard','glass','metal','paper','plastic'] %}
+                <div class="card" style="padding:0; overflow:hidden; display:flex; flex-direction:column;">
+                    <img src="{{ img }}" alt="{{ item.prediction }}" class="round" 
+                         style="width:100%; height:220px; object-fit:cover; border-bottom:1px solid var(--stroke);">
+
+                    <div style="padding:16px; flex-grow:1; display:flex; flex-direction:column;">
+                        <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:8px;">
+                            <div class="badge">{{ _(item.prediction|title) }}</div>
+                            {% if is_recyclable %}
+                                <span class="badge green">{{ _("Recyclable") }}</span>
+                            {% else %}
+                                <span class="badge red">{{ _("Non-recyclable") }}</span>
+                            {% endif %}
+                        </div>
+
+                        <div class="muted" style="margin-bottom:8px;">
+                            {{ "%.1f"|format(item.confidence) }}% {{ _("Confidence") }}
+                        </div>
+
+                        <div class="muted" style="margin-top:auto; font-size:13px;">
+                            {{ item.timestamp.strftime('%Y-%m-%d %H:%M') }}
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    {% else %}
+        <div style="text-align:center; padding:60px 20px;">
+            <p class="muted" style="font-size:1.1rem;">
+                {{ _("No history yet. Start by classifying an image.") }}
+            </p>
+            <a href="{{ url_for('upload_image') }}" class="btn primary">
+                {{ _("Classify Waste") }}
+            </a>
+        </div>
+    {% endif %}
+</div>
+{% endblock %}

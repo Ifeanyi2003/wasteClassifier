@@ -1,0 +1,30 @@
+﻿{% extends "layout.html" %}
+
+{% block title %}{{ _("Login") }} • {{ _("Waste Classifier") }}{% endblock %}
+
+{% block content %}
+<div class="card" style="max-width:520px; margin-inline:auto;">
+    <h2 style="margin-top:0; text-align:center; color:var(--accent);">
+        {{ _("Welcome Back") }}
+    </h2>
+    <form method="POST" style="display:grid; gap:14px; margin-top:20px;">
+        <div>
+            <label class="muted">{{ _("Username") }}</label>
+            <input type="text" name="username" required autofocus
+                   style="width:100%; padding:14px; border-radius:12px; border:1px solid var(--stroke); background:rgba(255,255,255,.06); color:var(--text); font-size:1rem;">
+        </div>
+        <div>
+            <label class="muted">{{ _("Password") }}</label>
+            <input type="password" name="password" required
+                   style="width:100%; padding:14px; border-radius:12px; border:1px solid var(--stroke); background:rgba(255,255,255,.06); color:var(--text); font-size:1rem;">
+        </div>
+        <button class="btn primary" type="submit" style="margin-top:10px; font-size:1.1rem; padding:14px;">
+            {{ _("Login") }}
+        </button>
+    </form>
+    <p class="muted" style="margin-top:16px; text-align:center;">
+        {{ _("No account?") }} 
+        <a href="{{ url_for('register') }}" style="color:var(--accent); font-weight:600;">{{ _("Register") }}</a>
+    </p>
+</div>
+{% endblock %}

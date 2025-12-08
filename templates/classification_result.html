@@ -1,0 +1,50 @@
+﻿{% extends "layout.html" %} {% block title %}{{
+_("Result") }} â€¢ {{ _("Waste Classifier") }}{% endblock %} {% block content %}
+{% set recyclable_classes = ['cardboard','glass','metal','paper','plastic'] %}
+{% set is_recyclable = prediction in recyclable_classes %}
+<div class="grid" style="grid-template-columns: 420px 1fr; gap: 22px">
+  <div class="card">
+    <img
+      src="{{ image_url }}"
+      alt="{{ _('Uploaded image') }}"
+      class="round"
+      style="width: 100%; height: auto"
+    />
+  </div>
+  <div class="card">
+    <h2 style="margin-top: 0">{{ _("Prediction") }}</h2>
+    <p class="muted" style="margin-top: -6px">
+      {{ _("Model output for your image") }}
+    </p>
+    <div style="margin-top: 14px">
+      <div style="margin: 8px 0">
+        <span class="muted">{{ _("Class:") }}</span>
+        <span class="badge">{{ prediction|title }}</span>
+      </div>
+      <div style="margin: 8px 0">
+        <span class="muted">{{ _("Confidence:") }}</span>
+        <span class="badge">{{ confidence }}%</span>
+      </div>
+      <div style="margin: 8px 0">
+        <span class="muted">{{ _("Status:") }}</span>
+        {% if prediction == 'not recognized' %}
+        <span class="badge red">{{ _("Unknown") }}</span>
+        {% elif is_recyclable %}
+        <span class="badge green">â™» {{ _("Recyclable") }}</span>
+        {% else %}
+        <span class="badge red">âŒ {{ _("Not Recyclable") }}</span>
+        {% endif %}
+      </div>
+    </div>
+    <div style="margin-top: 18px; display: flex; gap: 10px; flex-wrap: wrap">
+      <a class="btn primary" href="{{ url_for('upload_image') }}"
+        >{{ _("Classify Another") }}</a
+      >
+      <a class="btn" href="{{ url_for('history') }}">{{ _("View History") }}</a>
+    </div>
+  </div>
+</div>
+{% endblock %}
+
+
+
