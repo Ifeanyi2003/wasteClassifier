@@ -10,7 +10,6 @@ from PIL import Image
 from werkzeug.utils import secure_filename
 from functools import wraps
 
-# ==================== FLASK + BABEL SETUP ====================
 app = Flask(__name__)
 app.config['SECRET_KEY'] = 'your-super-secret-key-123456789-change-this'
 app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+pymysql://root@localhost/waste_classifier'
@@ -122,14 +121,10 @@ def login_required(f):
         return f(*args, **kwargs)
     return decorated
 
-# ==================== ROUTES ====================
-
-# LANDING PAGE - EVERYONE SEES THIS FIRST
 @app.route('/')
 def landing():
     return render_template('landing.html')
 
-# UPLOAD - ONLY LOGGED-IN USERS CAN ACCESS
 @app.route('/upload', methods=['GET', 'POST'])
 @login_required
 def upload_image():
