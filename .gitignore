@@ -1,0 +1,23 @@
+# Python / Flask ignores
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+venv/
+.venv/
+.env
+
+# Database files (critical – never commit user data!)
+*.db
+*.sqlite3
+instance/
+waste_classifier.db
+
+# Uploaded user files
+static/uploads/*
+!static/uploads/.gitkeep   # optional: keeps the empty folder in git if needed
+
+# Windows / macOS junk
+.DS_Store
+Thumbs.db

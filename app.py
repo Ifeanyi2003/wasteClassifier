@@ -12,8 +12,9 @@ from functools import wraps
 
 app = Flask(__name__)
 app.config['SECRET_KEY'] = 'your-super-secret-key-123456789-change-this'
-app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+pymysql://root@localhost/waste_classifier'
+app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///waste_classifier.db'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
+app.config['SQLALCHEMY_ENGINE_OPTIONS'] = {"connect_args": {"check_same_thread": False}}  # Important for SQLite + Flask
 app.config['UPLOAD_FOLDER'] = 'static/uploads'
 app.config['BABEL_DEFAULT_LOCALE'] = 'en'
 app.config['BABEL_TRANSLATION_DIRECTORIES'] = 'translations'
@@ -74,6 +75,7 @@ class Prediction(db.Model):
     timestamp = db.Column(db.DateTime, default=datetime.utcnow)
     user_id = db.Column(db.Integer, db.ForeignKey('user.id'), nullable=False)
 
+# Create tables if they don't exist (runs once on startup)
 with app.app_context():
     db.create_all()
 
