@@ -1,0 +1,6 @@
+flask
+flask-babel
+flask-sqlalchemy
+torch torchvision --index-url https://download.pytorch.org/whl/cpu
+pillow
+werkzeug
