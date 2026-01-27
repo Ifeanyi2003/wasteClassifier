@@ -3,5 +3,5 @@ flask-babel
 flask-sqlalchemy
 pillow
 werkzeug
-torch
-torchvision
+torch==2.4.1
+torchvision==0.19.1
